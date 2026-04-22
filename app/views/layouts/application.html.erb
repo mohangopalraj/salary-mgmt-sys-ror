@@ -24,6 +24,11 @@
   </head>
 
   <body>
+  <nav>
+      <%= link_to "Employees", employees_path %> |
+      <%= link_to "Insights", "/insights" %>
+    </nav>
+    <hr>
     <%= yield %>
   </body>
 </html>

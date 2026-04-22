@@ -1,0 +1,28 @@
+<h1>Salary Insights</h1>
+
+<h3>Country Stats</h3>
+
+<%= form_with url: "/insights/country", method: :get do %>
+  <%= text_field_tag :country, params[:country], placeholder: "Enter country" %>
+  <%= submit_tag "Get Stats" %>
+<% end %>
+
+<% if @stats %>
+  <p>Min Salary: <%= @stats.min_salary %></p>
+  <p>Max Salary: <%= @stats.max_salary %></p>
+  <p>Avg Salary: <%= @stats.avg_salary %></p>
+<% end %>
+
+<hr>
+
+<h3>Job Title Avg</h3>
+
+<%= form_with url: "/insights/job", method: :get do %>
+  <%= text_field_tag :country, params[:country], placeholder: "Country" %>
+  <%= text_field_tag :job_title, params[:job_title], placeholder: "Job Title" %>
+  <%= submit_tag "Get Avg" %>
+<% end %>
+
+<% if @avg %>
+  <p>Average Salary: <%= @avg %></p>
+<% end %>
