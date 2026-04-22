@@ -66,3 +66,5 @@ group :test do
 end
 
 gem "mysql2", "~> 0.5.7"
+
+gem "kaminari", "~> 1.2"

@@ -1,6 +1,6 @@
 class EmployeesController < ApplicationController
   def index
-    @employees = Employee.limit(50)
+    @employees = Employee.order(created_at: :desc).page(params[:page]).per(20)
   end
 
   def create
