@@ -15,6 +15,7 @@ class Employee < ApplicationRecord
       ).take
   end
 
+  # Job title average salary
   def self.job_title_avg(country, job_title)
     where(country: country, job_title: job_title).average(:salary)
   end
